@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Literary Loot</title>
+<meta name="description" content="Privacy policy for Literary Loot, the personal quotes tracker for Android.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0D1A2E;
+    --action: #1A3A6E;
+    --mid-blue: #2D4A6E;
+    --muted: #5A7A9E;
+    --light-bg: #E6EDF7;
+    --border: #A0B8D8;
+    --pale-border: #D0D9E8;
+    --page-bg: #F4F6FA;
+    --white: #FFFFFF;
+    --terracotta: #C04A20;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+    background: var(--page-bg);
+    color: var(--mid-blue);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .quote { font-family: "Roboto Serif", Georgia, serif; }
+  a { color: var(--action); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- Nav ---------- */
+  .nav { background: var(--navy); position: sticky; top: 0; z-index: 10; }
+  .nav-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .wordmark {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--white);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 2px;
+  }
+  .wordmark .dot { color: var(--terracotta); }
+  .nav-links { display: flex; align-items: center; gap: 22px; }
+  .nav-links a { color: #C7D6EC; font-size: 0.95rem; font-weight: 500; }
+  .nav-links a:hover { color: var(--white); text-decoration: none; }
+  .nav-links a.active { color: var(--white); }
+
+  /* ---------- Header ---------- */
+  .page-head {
+    background: var(--navy);
+    color: var(--white);
+    padding: 56px 24px 48px;
+    text-align: center;
+  }
+  .page-head h1 {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--white);
+  }
+  .page-head p { color: var(--muted); margin-top: 10px; font-size: 0.95rem; }
+
+  /* ---------- Body ---------- */
+  .wrap { max-width: 760px; margin: -28px auto 0; padding: 0 24px 72px; }
+  .doc {
+    background: var(--white);
+    border: 1px solid var(--pale-border);
+    border-radius: 16px;
+    padding: 44px 40px;
+    box-shadow: 0 8px 30px rgba(13, 26, 46, 0.05);
+  }
+
+  .lead {
+    font-size: 1.05rem;
+    color: var(--mid-blue);
+    border-left: 3px solid var(--terracotta);
+    padding-left: 18px;
+    margin-bottom: 8px;
+  }
+
+  .doc h2 {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 1.3rem;
+    margin: 34px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--pale-border);
+  }
+  .doc h3 { color: var(--navy); font-size: 1.02rem; margin: 20px 0 6px; }
+  .doc p { margin-bottom: 14px; color: var(--mid-blue); }
+  .doc ul { margin: 0 0 16px 4px; padding-left: 22px; }
+  .doc li { margin-bottom: 8px; color: var(--mid-blue); }
+  .doc strong { color: var(--navy); }
+
+  .chip {
+    display: inline-block;
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    color: var(--action);
+    font-size: 0.85rem;
+    border-radius: 999px;
+    padding: 3px 12px;
+    margin: 0 6px 6px 0;
+  }
+
+  .callout {
+    background: var(--light-bg);
+    border: 1px solid var(--pale-border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .contact-card {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-top: 8px;
+  }
+  .contact-card p { color: #C7D6EC; margin-bottom: 6px; }
+  .contact-card a { color: #9FC0F0; }
+
+  /* ---------- Footer ---------- */
+  .footer { background: var(--navy); color: #9FB4D2; padding: 40px 24px; }
+  .footer-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .footer .wordmark { font-size: 1.1rem; }
+  .footer-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .footer-links a { color: #9FB4D2; font-size: 0.92rem; }
+  .footer-links a:hover { color: var(--white); text-decoration: none; }
+  .footer-copy { width: 100%; font-size: 0.82rem; color: var(--muted); padding-top: 8px; }
+
+  @media (max-width: 540px) {
+    .doc { padding: 30px 22px; }
+    .nav-links { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="wordmark" href="index.html">Literary Loot<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html" class="active">Privacy</a>
+        <a href="https://play.google.com/store/apps/details?id=ro.aniri.literaryloot">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="page-head">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: June 8, 2026</p>
+  </header>
+
+  <div class="wrap">
+    <article class="doc">
+
+      <p class="lead">Literary Loot (“the app”, “we”, “us”) is a personal quotes tracker for Android. This policy explains what little information the app handles, why, and the choices you have. We built Literary Loot to be quiet about your data — most of what you save never leaves your device.</p>
+
+      <div style="margin: 18px 0 4px;">
+        <span class="chip">Android · Google Play</span>
+        <span class="chip">ro.aniri.literaryloot</span>
+        <span class="chip">Minimal data</span>
+      </div>
+
+      <h2>1. Information We Collect</h2>
+
+      <h3>Content you create</h3>
+      <p>The quotes, book titles, author names, topics, and notes you add are <strong>stored locally on your device</strong> in the app’s private database. We do not read this content, and it is not transmitted to us or sold to anyone.</p>
+
+      <h3>Photos you scan</h3>
+      <p>If you use the scan feature, the app uses your camera or a photo you select to extract text from a page. This image and the on-device text recognition are processed <strong>entirely on your device</strong> (see Section 3). The photo is not uploaded to us or to any third party, and is not stored beyond what is needed to complete the scan.</p>
+
+      <h3>Analytics &amp; diagnostics</h3>
+      <p>To understand how the app is used and to fix crashes, we collect a limited amount of anonymous, aggregated data through Google Firebase:</p>
+      <ul>
+        <li><strong>Usage analytics</strong> — events such as app opens, screens viewed, and feature usage, in aggregate. These are not tied to your identity.</li>
+        <li><strong>Crash &amp; performance data</strong> — technical details about crashes (device model, OS version, app version, stack traces) so we can resolve bugs.</li>
+        <li><strong>App instance identifiers</strong> — a randomly generated identifier used by Firebase to count unique installs. It is not your name, email, or phone number.</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>What we do <em>not</em> collect:</strong> we do not require an account, do not ask for your name or email, do not access your contacts, location, or microphone, and we do not show ads or use advertising trackers. The camera and photo access described below are used only for scanning text, and those images stay on your device.</p>
+      </div>
+
+      <h2>2. Permissions the App Uses</h2>
+      <p>Literary Loot declares only the permissions it needs to function:</p>
+      <ul>
+        <li><strong>Camera</strong> (<code>CAMERA</code>, optional) — used only when you choose to scan text from a book page. The camera hardware is marked optional, so the app also runs on devices without a camera. The permission is requested only when you start a scan.</li>
+        <li><strong>Photos &amp; media</strong> (<code>READ_MEDIA_IMAGES</code> on Android 13+, <code>READ_EXTERNAL_STORAGE</code> on older versions) — used only if you pick an existing photo to scan. The app accesses just the image you select, not your whole gallery.</li>
+        <li><strong>Internet</strong> — used to send anonymous analytics and crash reports to Firebase. The app does not transmit your quotes or scanned images over the internet.</li>
+      </ul>
+      <p>Scanned and shared images are handled through a secure in-app file provider and are kept in the app’s own private storage area. You can deny or revoke the camera and photo permissions in your device’s system settings at any time; doing so simply disables scanning, and the rest of the app continues to work.</p>
+
+      <h2>3. Third-Party Services</h2>
+      <p>The app uses a small number of Google libraries:</p>
+      <ul>
+        <li><strong>Google Firebase Analytics &amp; Crashlytics</strong> (Google LLC) — for the anonymous usage analytics and crash reporting described in Section 1. This limited technical data is processed by Google on our behalf.</li>
+        <li><strong>Google ML Kit Text Recognition</strong> (Google LLC) — performs the optical character recognition for the scan feature. This runs <strong>on your device</strong> using a bundled model; the images you scan are not sent to Google or to us in order to recognize their text.</li>
+      </ul>
+      <p>Google’s handling of any data is governed by their own terms:</p>
+      <ul>
+        <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a></li>
+        <li><a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener">Google ML Kit Terms</a></li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+      </ul>
+      <p>We do not use any advertising networks, social media SDKs, or third-party data brokers.</p>
+
+      <h2>4. How We Use Information</h2>
+      <ul>
+        <li>To store and display the quotes and collections you create.</li>
+        <li>To keep the app stable by identifying and fixing crashes.</li>
+        <li>To understand, in aggregate, which features are useful so we can improve the app.</li>
+        <li>To restore your collection through Android’s Auto Backup if you reinstall or switch devices.</li>
+      </ul>
+      <p>We never use your saved quotes for advertising, profiling, or training models, and we never sell your data.</p>
+
+      <h2>5. Backup</h2>
+      <p>Literary Loot supports Android’s standard <strong>Auto Backup</strong>. If you have backups enabled for your device, Android may automatically copy the app’s data to your own Google Drive backup space so it can be restored when you reinstall or switch phones. This backup is performed and stored by Google under your Google Account, not by us — we have no access to it. You can turn this off, or delete existing backups, through your device’s Google backup settings.</p>
+
+      <h2>6. Data Retention &amp; Deletion</h2>
+      <p>Your quotes and other content remain on your device until you delete them or uninstall the app. Uninstalling removes all locally stored content. Any Android Auto Backup copy is managed through your Google Account backup settings, as described above.</p>
+      <p>Anonymous analytics and crash data are retained by Firebase according to Google’s default retention periods. Because this data is not linked to your identity, it cannot be traced back to you individually.</p>
+
+      <h2>7. Your Choices</h2>
+      <ul>
+        <li><strong>Permissions</strong> — grant, deny, or revoke camera and photo access at any time in your device settings.</li>
+        <li><strong>Analytics</strong> — uninstalling the app stops all analytics and crash reporting. You can also limit Google’s ad/analytics identifiers through your device’s privacy settings.</li>
+        <li><strong>Backup</strong> — turn Android Auto Backup on or off, and delete existing backups, in your device’s Google backup settings.</li>
+        <li><strong>Full erasure</strong> — uninstalling the app removes all local data; clearing the Google backup removes the rest.</li>
+      </ul>
+
+      <h2>8. Children’s Privacy</h2>
+      <p>Literary Loot is intended for a general audience and is not directed at children under 13 (or the minimum age of digital consent in your country). We do not knowingly collect personal information from children. The app does not require an account and does not collect names, emails, or contact details. If you believe a child has provided us with personal information, please contact us and we will take appropriate steps to address it.</p>
+
+      <h2>9. Data Security</h2>
+      <p>Your content is stored within the app’s private storage on your device. Any data transmitted to Firebase is sent over encrypted (HTTPS/TLS) connections. While no method of electronic storage is completely secure, we limit collection to the minimum necessary precisely to reduce risk.</p>
+
+      <h2>10. International Users</h2>
+      <p>The app is offered from Romania. If you use it elsewhere, note that the limited anonymous data processed by Firebase may be handled on Google’s servers in other countries under the safeguards described in Google’s privacy documentation.</p>
+
+      <h2>11. Changes to This Policy</h2>
+      <p>We may update this policy as the app evolves. Material changes will be reflected here with a revised “Last updated” date, and where appropriate, noted within the app. Continued use after an update means you accept the revised policy.</p>
+
+      <h2>12. Contact Us</h2>
+      <p>Questions about this policy or your data? We’re happy to help.</p>
+      <div class="contact-card">
+        <p><strong style="color:#fff;">Literary Loot</strong></p>
+        <p>Developer: Irina Borozan</p>
+        <p>Email: <a href="mailto:irina@aniri.ro">irina@aniri.ro</a></p>
+        <p>App package: ro.aniri.literaryloot</p>
+      </div>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a class="wordmark" href="index.html">Literary Loot<span class="dot">.</span></a>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:irina@aniri.ro">Contact</a>
+        <a href="https://play.google.com/store/apps/details?id=ro.aniri.literaryloot">Google Play</a>
+      </div>
+      <p class="footer-copy">© 2026 Literary Loot · Made by aniri · ro.aniri.literaryloot</p>
+    </div>
+  </footer>
+
+</body>
+</html>
