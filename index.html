@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Literary Loot — Save the lines worth keeping</title>
 <meta name="description" content="Literary Loot is a personal quotes tracker for book lovers. Capture, organize, and revisit the passages that stay with you.">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500&display=swap" rel="stylesheet">
@@ -62,8 +64,15 @@
     color: var(--white);
     letter-spacing: 0.2px;
     display: inline-flex;
-    align-items: baseline;
+    align-items: center;
     gap: 2px;
+  }
+  .wordmark .logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 7px;
   }
   .wordmark .dot { color: var(--terracotta); }
   .nav-links { display: flex; align-items: center; gap: 22px; }
@@ -85,6 +94,14 @@
     overflow: hidden;
   }
   .hero-inner { max-width: 760px; margin: 0 auto; position: relative; }
+  .hero-mascot {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    margin: 0 auto 22px;
+    display: block;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  }
   .hero h1 {
     font-family: Georgia, "Times New Roman", serif;
     font-weight: 700;
@@ -257,7 +274,7 @@
   <!-- Nav -->
   <nav class="nav">
     <div class="nav-inner">
-      <a class="wordmark" href="index.html">Literary Loot<span class="dot">.</span></a>
+      <a class="wordmark" href="index.html"><img class="logo" src="logo.png" alt="" width="30" height="30">Literary Loot<span class="dot">.</span></a>
       <div class="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="privacy.html">Privacy</a>
@@ -269,6 +286,7 @@
   <!-- Hero -->
   <header class="hero">
     <div class="hero-inner">
+      <img class="hero-mascot" src="logo.png" alt="Literary Loot mascot — a hedgehog carrying a stack of books" width="132" height="132">
       <h1>Literary Loot<span class="dot">.</span></h1>
       <p class="tagline">Your personal quotes tracker — save the lines worth keeping.</p>
 
