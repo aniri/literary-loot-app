@@ -181,7 +181,7 @@
   <!-- Header -->
   <header class="page-head">
     <h1>Privacy Policy</h1>
-    <p>Last updated: June 8, 2026</p>
+    <p>Last updated: June 14, 2026</p>
   </header>
 
   <div class="wrap">
@@ -200,8 +200,11 @@
       <h3>Content you create</h3>
       <p>The quotes, book titles, author names, topics, and notes you add are <strong>stored locally on your device</strong> in the app’s private database. We do not read this content, and it is not transmitted to us or sold to anyone.</p>
 
-      <h3>Photos you scan</h3>
-      <p>If you use the scan feature, the app uses your camera or a photo you select to extract text from a page. This image and the on-device text recognition are processed <strong>entirely on your device</strong> (see Section 3). The photo is not uploaded to us or to any third party, and is not stored beyond what is needed to complete the scan.</p>
+      <h3>Photos you scan or attach</h3>
+      <p>If you use the photo feature, the app uses your camera or a photo you select to capture a book page. Text recognition runs <strong>entirely on your device</strong> (see Section 3); the image is not uploaded to us or to any third party. If you attach the photo to a saved quote, a copy is kept <strong>locally in the app’s private storage</strong> as part of that entry until you delete it.</p>
+
+      <h3>Book lookups (Google Books)</h3>
+      <p>When you use the <strong>Add Book</strong> search, the book <strong>title you type</strong> is sent to the Google Books API over the internet to fetch matching details (author, year, genre, and a cover image). Only the text you type in that field is sent — no account, name, or other personal information is attached, and your saved quotes are never sent. Cover images shown in the app are loaded from Google’s servers. This lookup is optional: you can ignore the suggestions and enter book details by hand.</p>
 
       <h3>Analytics &amp; diagnostics</h3>
       <p>To understand how the app is used and to fix crashes, we collect a limited amount of anonymous, aggregated data through Google Firebase:</p>
@@ -220,7 +223,7 @@
       <ul>
         <li><strong>Camera</strong> (<code>CAMERA</code>, optional) — used only when you choose to scan text from a book page. The camera hardware is marked optional, so the app also runs on devices without a camera. The permission is requested only when you start a scan.</li>
         <li><strong>Photos &amp; media</strong> (<code>READ_MEDIA_IMAGES</code> on Android 13+, <code>READ_EXTERNAL_STORAGE</code> on older versions) — used only if you pick an existing photo to scan. The app accesses just the image you select, not your whole gallery.</li>
-        <li><strong>Internet</strong> — used to send anonymous analytics and crash reports to Firebase. The app does not transmit your quotes or scanned images over the internet.</li>
+        <li><strong>Internet</strong> — used to send anonymous analytics and crash reports to Firebase, and to look up book details from the Google Books API when you use the Add Book search (see Section 1). The app does not transmit your saved quotes or your scanned page images over the internet.</li>
       </ul>
       <p>Scanned and shared images are handled through a secure in-app file provider and are kept in the app’s own private storage area. You can deny or revoke the camera and photo permissions in your device’s system settings at any time; doing so simply disables scanning, and the rest of the app continues to work.</p>
 
@@ -229,11 +232,13 @@
       <ul>
         <li><strong>Google Firebase Analytics &amp; Crashlytics</strong> (Google LLC) — for the anonymous usage analytics and crash reporting described in Section 1. This limited technical data is processed by Google on our behalf.</li>
         <li><strong>Google ML Kit Text Recognition</strong> (Google LLC) — performs the optical character recognition for the scan feature. This runs <strong>on your device</strong> using a bundled model; the images you scan are not sent to Google or to us in order to recognize their text.</li>
+        <li><strong>Google Books API</strong> (Google LLC) — when you search for a book in Add Book, the title you type is sent to Google Books to return matching metadata and cover images. Only that search text is sent; no account or personal data is included.</li>
       </ul>
       <p>Google’s handling of any data is governed by their own terms:</p>
       <ul>
         <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy &amp; Security</a></li>
         <li><a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener">Google ML Kit Terms</a></li>
+        <li><a href="https://developers.google.com/books/docs/v1/using" target="_blank" rel="noopener">Google Books API</a></li>
         <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
       </ul>
       <p>We do not use any advertising networks, social media SDKs, or third-party data brokers.</p>
@@ -241,14 +246,17 @@
       <h2>4. How We Use Information</h2>
       <ul>
         <li>To store and display the quotes and collections you create.</li>
+        <li>To look up book details and cover images when you search for a book in Add Book.</li>
         <li>To keep the app stable by identifying and fixing crashes.</li>
         <li>To understand, in aggregate, which features are useful so we can improve the app.</li>
-        <li>To restore your collection through Android’s Auto Backup if you reinstall or switch devices.</li>
+        <li>To restore your collection through Android’s Auto Backup, or from a backup file you export, if you reinstall or switch devices.</li>
       </ul>
       <p>We never use your saved quotes for advertising, profiling, or training models, and we never sell your data.</p>
 
-      <h2>5. Backup</h2>
+      <h2>5. Backup &amp; Sharing</h2>
       <p>Literary Loot supports Android’s standard <strong>Auto Backup</strong>. If you have backups enabled for your device, Android may automatically copy the app’s data to your own Google Drive backup space so it can be restored when you reinstall or switch phones. This backup is performed and stored by Google under your Google Account, not by us — we have no access to it. You can turn this off, or delete existing backups, through your device’s Google backup settings.</p>
+      <p><strong>Manual export / import.</strong> You can also export your whole library — quotes, books, topics, tags, and page photos — to a single <code>.zip</code> file, and import it later. You choose where the file is saved using Android’s system file picker; the exported file is entirely under your control and is never sent to us. Importing a backup replaces the app’s current data with the file’s contents.</p>
+      <p><strong>Sharing.</strong> When you share a quote out of the app, or send content from another app into Literary Loot, the content is handed over through Android’s system share sheet to the app <em>you</em> choose. Anything you send to another app is then handled under that app’s own privacy policy.</p>
 
       <h2>6. Data Retention &amp; Deletion</h2>
       <p>Your quotes and other content remain on your device until you delete them or uninstall the app. Uninstalling removes all locally stored content. Any Android Auto Backup copy is managed through your Google Account backup settings, as described above.</p>
