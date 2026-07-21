@@ -181,7 +181,7 @@
   <!-- Header -->
   <header class="page-head">
     <h1>Privacy Policy</h1>
-    <p>Last updated: June 15, 2026</p>
+    <p>Last updated: July 21, 2026</p>
   </header>
 
   <div class="wrap">
@@ -206,6 +206,9 @@
       <h3>Book lookups (Google Books)</h3>
       <p>When you use the <strong>Add Book</strong> search, the book <strong>title you type</strong> is sent to the Google Books API over the internet to fetch matching details (author, year, genre, and a cover image). Only the text you type in that field is sent — no account, name, or other personal information is attached, and your saved quotes are never sent. Cover images shown in the app are loaded from Google’s servers. This lookup is optional: you can ignore the suggestions and enter book details by hand.</p>
 
+      <h3>Link previews when you share a URL</h3>
+      <p>If you share a <strong>web link (URL)</strong> into Literary Loot, the app fetches that web page to find a preview image (its Open Graph image) so it can attach a picture to your new quote. Only a request to that link’s own website is made — no account, name, or other personal information is included — and it happens only at the moment you choose to share a link. If no preview image is found, the link is simply kept as text.</p>
+
       <h3>Analytics &amp; diagnostics</h3>
       <p>To understand how the app is used and to fix crashes, we collect a limited amount of anonymous, aggregated data through Google Firebase:</p>
       <ul>
@@ -223,7 +226,7 @@
       <ul>
         <li><strong>Camera</strong> (<code>CAMERA</code>, optional) — used only when you choose to scan text from a book page. The camera hardware is marked optional, so the app also runs on devices without a camera. The permission is requested only when you start a scan.</li>
         <li><strong>Photos &amp; media</strong> (<code>READ_MEDIA_IMAGES</code> on Android 13+, <code>READ_EXTERNAL_STORAGE</code> on older versions) — used only if you pick an existing photo to scan. The app accesses just the image you select, not your whole gallery.</li>
-        <li><strong>Internet</strong> — used to send anonymous analytics and crash reports to Firebase, and to look up book details from the Google Books API when you use the Add Book search (see Section 1). The app does not transmit your saved quotes or your scanned page images over the internet.</li>
+        <li><strong>Internet</strong> — used to send anonymous analytics and crash reports to Firebase, to look up book details from the Google Books API when you use the Add Book search, and — when you share a web link into the app — to fetch that link’s page for a preview image (see Section 1). The app does not transmit your saved quotes or your scanned page images over the internet.</li>
       </ul>
       <p>Scanned and shared images are handled through a secure in-app file provider and are kept in the app’s own private storage area. You can deny or revoke the camera and photo permissions in your device’s system settings at any time; doing so simply disables scanning, and the rest of the app continues to work.</p>
 
