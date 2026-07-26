@@ -210,7 +210,7 @@
       <p>If you share a <strong>web link (URL)</strong> into Literary Loot, the app fetches that web page to find a preview image (its Open Graph image) so it can attach a picture to your new quote. Only a request to that link’s own website is made — no account, name, or other personal information is included — and it happens only at the moment you choose to share a link. If no preview image is found, the link is simply kept as text.</p>
 
       <h3>Analytics &amp; diagnostics</h3>
-      <p>To understand how the app is used and to fix crashes, we collect a limited amount of anonymous, aggregated data through Google Firebase:</p>
+      <p>To understand how the app is used and to fix crashes, we collect a limited amount of pseudonymous, aggregated data through Google Firebase. It is tied only to a random, app-generated instance identifier — not to your name, email, or account (the app has none), and not to any advertising identifier:</p>
       <ul>
         <li><strong>Usage analytics</strong> — events such as app opens, screens viewed, and feature usage, in aggregate. These are not tied to your identity.</li>
         <li><strong>Crash &amp; performance data</strong> — technical details about crashes (device model, OS version, app version, stack traces) so we can resolve bugs.</li>
@@ -226,14 +226,14 @@
       <ul>
         <li><strong>Camera</strong> (<code>CAMERA</code>, optional) — used only when you choose to scan text from a book page. The camera hardware is marked optional, so the app also runs on devices without a camera. The permission is requested only when you start a scan.</li>
         <li><strong>Photos &amp; media</strong> (<code>READ_MEDIA_IMAGES</code> on Android 13+, <code>READ_EXTERNAL_STORAGE</code> on older versions) — used only if you pick an existing photo to scan. The app accesses just the image you select, not your whole gallery.</li>
-        <li><strong>Internet</strong> — used to send anonymous analytics and crash reports to Firebase, to look up book details from the Google Books API when you use the Add Book search, and — when you share a web link into the app — to fetch that link’s page for a preview image (see Section 1). The app does not transmit your saved quotes or your scanned page images over the internet.</li>
+        <li><strong>Internet</strong> — used to send pseudonymous analytics and crash reports to Firebase, to look up book details from the Google Books API when you use the Add Book search, and — when you share a web link into the app — to fetch that link’s page for a preview image (see Section 1). The app does not transmit your saved quotes or your scanned page images over the internet.</li>
       </ul>
       <p>Scanned and shared images are handled through a secure in-app file provider and are kept in the app’s own private storage area. You can deny or revoke the camera and photo permissions in your device’s system settings at any time; doing so simply disables scanning, and the rest of the app continues to work.</p>
 
       <h2>3. Third-Party Services</h2>
       <p>The app uses a small number of Google libraries:</p>
       <ul>
-        <li><strong>Google Firebase Analytics &amp; Crashlytics</strong> (Google LLC) — for the anonymous usage analytics and crash reporting described in Section 1. This limited technical data is processed by Google on our behalf.</li>
+        <li><strong>Google Firebase Analytics &amp; Crashlytics</strong> (Google LLC) — for the pseudonymous usage analytics and crash reporting described in Section 1. This limited technical data is processed by Google on our behalf.</li>
         <li><strong>Google ML Kit Text Recognition</strong> (Google LLC) — performs the optical character recognition for the scan feature. This runs <strong>on your device</strong> using a bundled model; the images you scan are not sent to Google or to us in order to recognize their text.</li>
         <li><strong>Google Books API</strong> (Google LLC) — when you search for a book in Add Book, the title you type is sent to Google Books to return matching metadata and cover images. Only that search text is sent; no account or personal data is included.</li>
       </ul>
@@ -263,7 +263,7 @@
 
       <h2>6. Data Retention &amp; Deletion</h2>
       <p>Your quotes and other content remain on your device until you delete them or uninstall the app. Uninstalling removes all locally stored content. Any Android Auto Backup copy is managed through your Google Account backup settings, as described above.</p>
-      <p>Anonymous analytics and crash data are retained by Firebase according to Google’s default retention periods. Because this data is not linked to your identity, it cannot be traced back to you individually.</p>
+      <p>Analytics and crash data are retained by Firebase according to Google’s default retention periods. Because this data is tied only to a random app-instance identifier and not to your name or account, it cannot ordinarily be traced back to you individually.</p>
 
       <h2>7. Your Choices</h2>
       <ul>
@@ -280,7 +280,7 @@
       <p>Your content is stored within the app’s private storage on your device. Any data transmitted to Firebase is sent over encrypted (HTTPS/TLS) connections. While no method of electronic storage is completely secure, we limit collection to the minimum necessary precisely to reduce risk.</p>
 
       <h2>10. International Users</h2>
-      <p>The app is offered from Romania. If you use it elsewhere, note that the limited anonymous data processed by Firebase may be handled on Google’s servers in other countries under the safeguards described in Google’s privacy documentation.</p>
+      <p>The app is offered from Romania. If you use it elsewhere, note that the limited pseudonymous data processed by Firebase may be handled on Google’s servers in other countries under the safeguards described in Google’s privacy documentation.</p>
 
       <h2>11. Changes to This Policy</h2>
       <p>We may update this policy as the app evolves. Material changes will be reflected here with a revised “Last updated” date, and where appropriate, noted within the app. Continued use after an update means you accept the revised policy.</p>
