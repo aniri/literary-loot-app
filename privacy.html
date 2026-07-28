@@ -181,7 +181,7 @@
   <!-- Header -->
   <header class="page-head">
     <h1>Privacy Policy</h1>
-    <p>Last updated: July 21, 2026</p>
+    <p>Last updated: July 28, 2026</p>
   </header>
 
   <div class="wrap">
@@ -225,10 +225,9 @@
       <p>Literary Loot declares only the permissions it needs to function:</p>
       <ul>
         <li><strong>Camera</strong> (<code>CAMERA</code>, optional) — used only when you choose to scan text from a book page. The camera hardware is marked optional, so the app also runs on devices without a camera. The permission is requested only when you start a scan.</li>
-        <li><strong>Photos &amp; media</strong> (<code>READ_MEDIA_IMAGES</code> on Android 13+, <code>READ_EXTERNAL_STORAGE</code> on older versions) — used only if you pick an existing photo to scan. The app accesses just the image you select, not your whole gallery.</li>
         <li><strong>Internet</strong> — used to send pseudonymous analytics and crash reports to Firebase, to look up book details from the Google Books API when you use the Add Book search, and — when you share a web link into the app — to fetch that link’s page for a preview image (see Section 1). The app does not transmit your saved quotes or your scanned page images over the internet.</li>
       </ul>
-      <p>Scanned and shared images are handled through a secure in-app file provider and are kept in the app’s own private storage area. You can deny or revoke the camera and photo permissions in your device’s system settings at any time; doing so simply disables scanning, and the rest of the app continues to work.</p>
+      <p>Choosing an existing photo to scan uses the <strong>Android Photo Picker</strong>, which hands the app only the single image you select — so the app requests <strong>no storage or “photos &amp; media” permission</strong> and never gains access to your whole gallery. Scanned and shared images are handled through a secure in-app file provider and are kept in the app’s own private storage area. You can deny or revoke the camera permission in your device’s system settings at any time; doing so simply disables camera scanning, and the rest of the app continues to work.</p>
 
       <h2>3. Third-Party Services</h2>
       <p>The app uses a small number of Google libraries:</p>
@@ -267,7 +266,7 @@
 
       <h2>7. Your Choices</h2>
       <ul>
-        <li><strong>Permissions</strong> — grant, deny, or revoke camera and photo access at any time in your device settings.</li>
+        <li><strong>Permissions</strong> — grant, deny, or revoke the camera permission at any time in your device settings. Selecting a photo to scan uses the Android Photo Picker, which needs no standing permission — you choose exactly one image each time.</li>
         <li><strong>Analytics</strong> — uninstalling the app stops all analytics and crash reporting, and clearing the app’s data resets its random Firebase instance identifier. The app does not use your device’s advertising ID at all.</li>
         <li><strong>Backup</strong> — turn Android Auto Backup on or off, and delete existing backups, in your device’s Google backup settings.</li>
         <li><strong>Full erasure</strong> — uninstalling the app removes all local data; clearing the Google backup removes the rest.</li>
