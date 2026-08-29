@@ -201,6 +201,19 @@
     transform: translateY(-2px);
   }
   .card.featured { border-color: var(--terracotta); border-width: 1.5px; }
+  .card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .card-head h3 { margin-bottom: 0; }
+  .badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--terracotta);
+    background: #F6E2D9;
+    border-radius: 999px;
+    padding: 3px 9px;
+    line-height: 1.4;
+  }
   .icon-box {
     width: 46px;
     height: 46px;
@@ -254,68 +267,6 @@
   .cta p { color: var(--muted); margin-bottom: 28px; }
   .cta .btn { background: var(--action); }
 
-  /* ---------- Testers / early access ---------- */
-  .testers { background: var(--navy); }
-  .testers-inner {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 62px 24px;
-    text-align: center;
-  }
-  .testers .eyebrow {
-    display: inline-block;
-    font-size: 0.78rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--terracotta);
-    margin-bottom: 14px;
-  }
-  .testers h2 {
-    font-family: Georgia, serif;
-    font-weight: 700;
-    color: var(--white);
-    font-size: clamp(1.6rem, 4vw, 2.1rem);
-    margin-bottom: 12px;
-  }
-  .testers > .testers-inner > p { color: #B9CBE4; margin: 0 auto; max-width: 540px; }
-  .testers ol {
-    text-align: left;
-    max-width: 470px;
-    margin: 24px auto 28px;
-    padding: 0;
-    list-style: none;
-    counter-reset: step;
-  }
-  .testers li {
-    position: relative;
-    padding: 3px 0 3px 42px;
-    color: #C7D6EC;
-    margin-bottom: 10px;
-    counter-increment: step;
-  }
-  .testers li::before {
-    content: counter(step);
-    position: absolute;
-    left: 0; top: 0;
-    width: 27px; height: 27px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #F0EAE8;
-    font-size: 0.85rem;
-    font-weight: 600;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .testers li a { color: #9FC0F0; }
-  .testers .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-  .btn-outline {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.35);
-    color: var(--white);
-  }
-  .btn-outline:hover { background: rgba(255,255,255,0.08); }
-
   /* ---------- Footer ---------- */
   .footer {
     background: var(--navy);
@@ -352,7 +303,7 @@
       <a class="wordmark" href="index.html"><img class="logo" src="logo.png" alt="" width="30" height="30">Literary Loot<span class="dot">.</span></a>
       <div class="nav-links">
         <a href="index.html" class="active">Home</a>
-        <a href="#testers">Testers</a>
+        <a href="#features">Features</a>
         <a href="privacy.html">Privacy</a>
         <a class="store-link" href="https://play.google.com/store/apps/details?id=ro.aniri.literaryloot">Get the app</a>
       </div>
@@ -389,7 +340,7 @@
     </div>
 
     <div class="grid">
-      <div class="card featured">
+      <div class="card">
         <div class="icon-box">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
         </div>
@@ -397,12 +348,31 @@
         <p>Type a quote or scan a page with your camera — on-device text recognition pulls the words straight off the paper.</p>
       </div>
 
+      <div class="card featured">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H17a1 1 0 0 1 1 1v14.5"/><path d="M4 5.5V19a2 2 0 0 0 2 2h12"/><path d="m8.5 9.5 3 3 4.5-5"/></svg>
+        </div>
+        <div class="card-head">
+          <h3>Bring your Kindle over</h3>
+          <span class="badge">New</span>
+        </div>
+        <p>Copy <em>My Clippings.txt</em> off your Kindle and import it — highlights arrive grouped by book, with their location and the date you saved them. Tick the ones you want; re-importing never duplicates.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"/><path d="M12 16V3"/><path d="m8 7 4-4 4 4"/></svg>
+        </div>
+        <h3>Save from any app</h3>
+        <p>Share text, a photo, or a link into Literary Loot from anywhere on your phone and it opens a new quote, already filled in — links even bring their own preview picture.</p>
+      </div>
+
       <div class="card">
         <div class="icon-box">
           <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>
         </div>
         <h3>Organize your way</h3>
-        <p>Link each quote to its book, then sort your collection with topics, genres, and tags — and filter by any of them, or by date.</p>
+        <p>Link each quote to its book — title search fills in the author, year, and cover for you — then sort your collection with topics, genres, and tags, and filter by any of them, or by date.</p>
       </div>
 
       <div class="card">
@@ -447,24 +417,6 @@
     </div>
   </section>
 
-  <!-- Testers / early access -->
-  <section class="testers" id="testers">
-    <div class="testers-inner">
-      <span class="eyebrow">Now in closed testing</span>
-      <h2>Help shape Literary Loot</h2>
-      <p>The app is in closed testing on Google Play. Join the testers to get early access, try new features first, and send feedback that steers what comes next.</p>
-      <ol>
-        <li>Join the <a href="https://groups.google.com/g/literary-loot-testers">Literary Loot Testers</a> Google Group with the Google account you use on your phone.</li>
-        <li>Open the <a href="https://play.google.com/apps/testing/ro.aniri.literaryloot">testing opt-in</a> and tap “Become a tester”.</li>
-        <li>Install Literary Loot from Google Play and start collecting.</li>
-      </ol>
-      <div class="btn-row">
-        <a class="btn btn-outline" href="https://groups.google.com/g/literary-loot-testers">Join the Google Group</a>
-        <a class="btn" href="https://play.google.com/apps/testing/ro.aniri.literaryloot">Opt in to testing</a>
-      </div>
-    </div>
-  </section>
-
   <!-- Quote band -->
   <div class="band">
     <div class="band-inner">
@@ -476,7 +428,7 @@
   <!-- CTA -->
   <section class="cta">
     <h2>Start your collection today</h2>
-    <p>Free on Android. Keep the lines that are worth keeping.</p>
+    <p>Free on Google Play. Keep the lines that are worth keeping.</p>
     <a class="btn" href="https://play.google.com/store/apps/details?id=ro.aniri.literaryloot">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.1 13.4 12 3.6 21.9c-.4-.2-.6-.6-.6-1.1V3.2c0-.5.2-.9.6-1.1zM14.8 13.4l2.6 2.6-9.1 5.2 6.5-7.8zm0-2.8L8.3 2.8l9.1 5.2-2.6 2.6zm3.9-2 2.8 1.6c.8.5.8 1.7 0 2.2l-2.8 1.6L15.9 12l2.8-3.4z"/></svg>
       Get it on Google Play
